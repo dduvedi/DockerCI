@@ -5,7 +5,7 @@ services:
     - docker
 
 before_install:
-    - dokcer build-t dduvedi/docker-frontend-travis -f Docfile.dev .
+    - docker build -t dduvedi/docker-frontend-travis -f Docfile.dev .
 
 script:
     - docker run dduvedi/docker-frontend-travis npm run test -- --coverage
